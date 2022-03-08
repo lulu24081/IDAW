@@ -1,5 +1,9 @@
 .p1 {
-    background-color: blue;
+    
+    background-color : lightblue;
     width: 100px;
     height: 150px;
+}
+.p1{
+color : black;
 }
