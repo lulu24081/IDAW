@@ -1,8 +1,8 @@
 .p1 {
     
-    background-color : lightblue;
+    color : lightblue;
     width: 100px;
-    height: 100px;
+    height: 60px;
 }
 .p1{
 color : red;
@@ -13,5 +13,5 @@ color : red;
 .p3 {
     background-color: black;
     color: white;
-    
+
 }
