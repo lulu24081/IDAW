@@ -1,6 +1,8 @@
 .p1 {
     
     background-color : rgb(219, 74, 7);
+    border: 1px solid black;
+    padding: 3px;
     width: 100px;
     height: 60px;
 }
@@ -12,7 +14,7 @@ color : red;
 }
 .p3 {
     background-color: black;
-    width: 800px;
+    width: 600px;
     height: 60 px;
     color: white;
 
