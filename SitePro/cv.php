@@ -6,6 +6,7 @@
             <div class="experiences">
             <?php
                 require_once('template_menu.php'); 
+                renderMenuToHTML('cv');
             ?> 
                 <div class ="experience2">
                     <h1>Mes expériences professionelles</h1>
