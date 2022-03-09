@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>question 1 </title>
@@ -8,11 +9,9 @@
         la date d'aujourd'hui est le : 
 
         <?php
-                echo date("d/m/Y");
+                echo date("d/m/Y")
         ?>
 
-
-        
     </body>
 </html>
 

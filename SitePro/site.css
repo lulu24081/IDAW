@@ -1,22 +1,65 @@
-.p1 {
-    
-    background-color : rgb(219, 74, 7);
-    border: 1px solid black;
-    padding: 3px;
-    width: 100px;
-    height: 60px;
+header{
+    background-color: rgba(25, 8, 44, 0.849);
+    height: 100px;
+    padding: 10px;
+    display: inline-flex;
+    font-size: 40px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
-.p1{
-color : red;
-}
-.p2{
-    color : red;
-}
-.p3 {
-    background-color: black;
-    width: 600px;
-    height: 60 px;
-    color: white;
 
+nav.menu {
+    background-color:rgba(39, 94, 19, 0.76);
+    display: flex;
+    width: 200px;
+    height: 500px;
+    box-sizing: border-box;
+    margin: 10px 0px;
+    align-items: center;
+    float :left;
+    
+
+    
+    
 }
+.experience2{
+    margin-left : 220px;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5px;
+}
+li {
+    margin: 7px;
+}
+nav a{
+    color: #000;
+    text-decoration: red;
+    display: block;
+    text-align: center;
+    border: 4px outset rgb(18, 1, 58);
+    padding: 4px;
+    margin: 4px;
+}
+body {
+height: 600px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+footer{
+    background-color: rgba(25, 8, 44, 0.849);
+    height: 100px;
+    padding: 10px;
+    display: inline-flex;
+    font-size: 40px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
 
