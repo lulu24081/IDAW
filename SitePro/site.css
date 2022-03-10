@@ -9,16 +9,15 @@ header{
     align-items: center;
 }
 
+
 nav.menu {
     background-color:rgba(39, 94, 19, 0.76);
-    display: flex;
     width: 200px;
     height: 500px;
     box-sizing: border-box;
     margin: 10px 0px;
     align-items: center;
-    float :left;
-    
+    display: inline-block;
 
     
     
@@ -61,5 +60,6 @@ footer{
     justify-content: center;
     align-items: center;
 }
+
 
 

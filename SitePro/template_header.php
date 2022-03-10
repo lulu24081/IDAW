@@ -6,5 +6,9 @@
         <link rel="stylesheet" href="site.css" type="text/css">
     </head>
     <body>
-        <header> Lucas ARIB </header>
+        
+        <header> 
+            <h2>Lucas ARIB </h2>
+            
+        </header>
         
