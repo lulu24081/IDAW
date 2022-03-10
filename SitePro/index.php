@@ -1,26 +1,32 @@
 <?php
-    require_once("header.php");
-    require_once("menu.php");
+    require_once("template_header.php"); 
+    require_once("template_menu.php");  
     $currentPageId = 'accueil';
+    $currentLang ='fr';
     if(isset($_GET['page'])) {
-    $currentPageId = $_GET['page'];
+        $currentPageId = $_GET['page'];
+    }
+    if(isset($_GET['lang'])) {
+        $currentLang = $_GET['lang'];
+        
+    renderMenuToHTML($currentPageId,$currentLang);
+    
+    
     }
 ?>
-<header class="bandeau_haut">
-    <h1 class="titre">Hector Durand</h1>
-</header>
-<?php
-    renderMenuToHTML($currentPageId);
-?>
-    <section class="corps">
-        <?php
-            $pageToInclude = $currentPageId . ".php";
-            if(is_readable($pageToInclude))
-                require_once($pageToInclude);
-            else
-                require_once("error.php");
-        ?>
+
+<section class="corps">
+    <?php
+        $pageToInclude = $currentLang . "/" . $currentPageId . "_" . $currentLang . ".php";
+        if(is_readable($pageToInclude))
+            require_once($pageToInclude);
+        else
+            require_once("error.php");
+    ?>
 </section>
+
+
 <?php
-    require_once("footer.php");
+    require_once("template_footer.php");
 ?>
+</html>

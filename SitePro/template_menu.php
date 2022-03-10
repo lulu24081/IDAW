@@ -1,21 +1,36 @@
 <?php
-    function renderMenuToHTML($currentPageId){
+    function renderMenuToHTML($currentPageId,$currentLang='fr'){
         $mymenu =array(
-            'index' => array('Accueil'),
-            'cv' => array('Mon CV'),
-            'projets' => array('Mes projets'),
-            'hobbies' => array('Mes Hobbies'),
+            'accueil' => array('Accueil','Welcome Page'),
+            'cv' => array('Mon CV','My Resume'),
+            'projets' => array('Mes projets','My projects'),
+            'hobbies' => array('Mes Hobbies','My hobbies'),
+            'contact' => array('contatct','network'),
         );
-        echo "<nav class=\"menu\"><ul>";
+
+        echo '<div class="container"><nav class ="menu">
+            <ul>';
+
+        
         foreach ($mymenu as $pageId => $pageParameters) {
-            echo "<li><a ";
-
-            if ($currentPageId == $pageId)
-                echo "id =\"currentpage\" ";
-            
-            echo "href =\"$pageId.php\">.$pageParameters[0].</a></li>\n";
+            if($currentPageId ==$pageId){
+                if($currentLang =='fr')
+                    echo'<li><a id ="currentpage" href="index.php?page=',$pageId,'&lang=',$currentLang,'">',$pageParameters[0],'</a></li>';
+                else
+                    echo '<li><a id ="currentpage" href="index.php?page=',$pageId,'&lang=',$currentLang,'">',$pageParameters[1],'</a></li>';
+            }
+            else{
+                if($currentLang == 'fr')
+                    echo '<li><a href="index.php?page=',$pageId,'&lang=',$currentLang,'">',$pageParameters[0],'</a></li>';
+                else
+                    echo '<li><a href="index.php?page=',$pageId,'&lang=',$currentLang,'">',$pageParameters[1],'</a></li>';
+            }
         }
-        echo "</ul></nav";
 
+    
 
-}
+            
+        echo "</ul></nav></div>";
+    }
+?>
+
