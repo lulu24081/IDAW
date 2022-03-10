@@ -4,6 +4,27 @@
 
         <p>During this year I took courses in programming and financial market engineering, which led me to develop a trading algorithm.</p>
         <p>Detail-oriented, responsible and hard-working, I am convinced that I can contribute to your company while continuing to train.</p>
+        <h1> My skills: </h1>
+        <ul>
+            <li>Adaptation</li>
+            <li>Working in a team</li>
+            <li>Gestion de projet</li>
+            <li>Perfect command of the office pack</li>
+            <li>Java Language</li>
+            <li>Language Python </li>
+            <li>Excel VBA</li>
+            <li>Web development </li>
+            <li>English TOEIC 865</li>
+            <li>Beginner Chinese </li>
+            <li>Spanish A2</li>
+        </ul>   
+
+            
+
+
+    
+
+
 
 
 
