@@ -1,11 +1,15 @@
+        <div class :"image">
+            <img src="CV_TP.jpg" alt="" />
+        </div>
 <?php
+    
     function renderMenuToHTML($currentPageId,$currentLang='fr'){
         $mymenu =array(
             'accueil' => array('Accueil','Welcome Page'),
             'cv' => array('Mon CV','My Resume'),
             'projets' => array('Mes projets','My projects'),
             'hobbies' => array('Mes Hobbies','My hobbies'),
-            'contact' => array('contatct','network'),
+            'contact' => array('contactes','network'),
         );
 
         echo '<div class="container"><nav class ="menu">
@@ -33,4 +37,5 @@
         echo "</ul></nav></div>";
     }
 ?>
+
 

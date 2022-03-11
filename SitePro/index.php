@@ -8,7 +8,7 @@
     }
     if(isset($_GET['lang'])) {
         $currentLang = $_GET['lang'];
-        
+
     renderMenuToHTML($currentPageId,$currentLang);
     
     

@@ -8,29 +8,41 @@ header{
     justify-content: center;
     align-items: center;
 }
-
+h1 {
+    text-underline-position: under;
+}
 
 nav.menu {
     background-color:rgba(39, 94, 19, 0.76);
-    width: 200px;
-    height: 500px;
+    display:block;
+    width: 1420px;
+    height: 60px;
     box-sizing: border-box;
-    margin: 10px 0px;
+    margin: 10px 0px ;
     align-items: center;
-    display: inline-block;
+    text-align: center;
+    
+    
+
+    
 
     
     
 }
 .experience2{
     margin-left : 220px;
+    top: 1000 px;
+    left: 50 px;
 }
 
 ul {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
     justify-content: center;
-    margin: 5px;
+    margin: 2px;
+    
 }
 li {
     margin: 7px;
@@ -45,7 +57,7 @@ nav a{
     margin: 4px;
 }
 body {
-height: 600px;
+    height: 1500 px;
     display: grid;
     grid-template-rows: auto 1fr auto;
 }
@@ -60,6 +72,17 @@ footer{
     justify-content: center;
     align-items: center;
 }
+
+img{
+    width: 270px;
+    height: 270px;
+    display : left;
+    
+    
+
+    
+}
+
 
 
 

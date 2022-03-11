@@ -1,4 +1,5 @@
 <a class='change_lang' href="index.php?page=cv&lang=fr">Français</a>
+<a class='change_lang' href="index.php?page=cv&lang=an">Anglais</a>
         <div class ="experience2">
                     <h1>My professional experiences</h1>
                     <li> May 2021 - August 2021 : <b>internship - UPM Raflatac Pompey </b> -- Completion of a three-month internship in a global project with the goal of increasing the productivity of the terminal.</li>

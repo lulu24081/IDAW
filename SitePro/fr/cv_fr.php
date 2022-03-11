@@ -1,4 +1,5 @@
 <a class='change_lang' href="index.php?page=cv&lang=an">Anglais</a>
+<a class='change_lang' href="index.php?page=cv&lang=fr">Francais</a>
         <div class ="experience2">
                     <h1>Mes expériences professionelles</h1>
                     <li> Mai 2021 - Aout 2021 : <b>Stagiaire - UPM Raflatac Pompey </b> -- Réalisation d'un stage de trois mois en immersion dans un projet à l'échelle mondiale en ayant pour but d'augmenter la productivité du terminal </li>
