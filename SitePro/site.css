@@ -8,8 +8,8 @@ header{
     justify-content: center;
     align-items: center;
 }
-h1 {
-    text-underline-position: under;
+.experience2 h1{
+    text-decoration: underline black;
 }
 
 nav.menu {
@@ -21,13 +21,6 @@ nav.menu {
     margin: 10px 0px ;
     align-items: center;
     text-align: center;
-    
-    
-
-    
-
-    
-    
 }
 .experience2{
     margin-left : 220px;
@@ -76,11 +69,7 @@ footer{
 img{
     width: 270px;
     height: 270px;
-    display : left;
-    
-    
-
-    
+    display: left; 
 }
 
 
