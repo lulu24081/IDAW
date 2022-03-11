@@ -1,5 +1,5 @@
         <div class :"image">
-            <img src="CV_TP.jpg" alt="" />
+            <img src="Photo_CV1.jpg" alt="" />
         </div>
 <?php
     

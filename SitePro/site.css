@@ -1,10 +1,10 @@
 header{
-    background-color: rgba(25, 8, 44, 0.849);
-    height: 100px;
+    background-color: rgba(31, 8, 53, 0.849);
+    height: 60px;
     padding: 10px;
     display: inline-flex;
     font-size: 40px;
-    width: 100%;
+    width: 60%;
     justify-content: center;
     align-items: center;
 }
@@ -35,7 +35,7 @@ ul {
     text-align: center;
     justify-content: center;
     margin: 2px;
-    
+    height: 500px;
 }
 li {
     margin: 7px;
@@ -50,18 +50,18 @@ nav a{
     margin: 4px;
 }
 body {
-    height: 1500 px;
+    height: 150%;
     display: grid;
     grid-template-rows: auto 1fr auto;
 }
 
 footer{
     background-color: rgba(25, 8, 44, 0.849);
-    height: 100px;
+    height: 30px;
     padding: 10px;
     display: inline-flex;
     font-size: 40px;
-    width: 100%;
+    width: 60%;
     justify-content: center;
     align-items: center;
 }
@@ -71,7 +71,12 @@ img{
     height: 270px;
     display: left; 
 }
-
+.change_lang {
+    display: block;
+    border: 4px outset rgb(18, 1, 58);
+    padding: 4px;
+    margin: 4px;
+}
 
 
 
