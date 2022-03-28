@@ -1,32 +1,40 @@
-
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Cours PHP / MySQL</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="cours.css">
-    </head>
-    <body>
-        <h1>Bases de données MySQL</h1>  
-        <?php
-           $hote = 'localhost:8889'; // Adresse du serveur 
-           $login = 'lucasarib%'; // Login 
-           $pass = 'Lucachlo1?'; // Mot de passe 
-           
-        
-           
-            
-            //On établit la connexion
-            $conn = new mysqli($servername, $username, $password);
-            
-            //On vérifie la connexion
-            if($conn->connect_error){
-                die('Erreur : ' .$conn->connect_error);
-            }
-            echo 'Connexion réussie';
-            
-            
 
-        ?>
-    </body>
+<head>
+    <meta charset='utf-8'>
+    <title>Database Connexion Test</title>
+</head>
+
+<?php
+    $servername = 'localhost';
+    $username = 'root';
+    $password = 'root';
+    $dbname = 'IDAW';
+
+    //essaye de se connecter
+    try{
+        $conn = new PDO("mysql:host=$servername;dbname=$dbname",$username,$password);
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        
+        //Sélectionne toutes les valeurs dans la table user
+        $sth = $conn->prepare("SELECT * FROM `user`");
+        $sth->execute();
+
+        //Affichage sous la forme de tableau dans la page
+        $resultat = $sth->fetchAll(PDO::FETCH_ASSOC);
+        echo '<pre>';
+        print_r($resultat);
+        echo '</pre>';
+    }
+
+    catch(PDOException $e){
+        echo "Erreur : " . $e->getMessage();
+    }
+    
+?>
+
+<body>
+
+</body>
 </html>

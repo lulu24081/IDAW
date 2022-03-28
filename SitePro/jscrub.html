@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="fr"> <head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script> <title>tabletest</title>
+    <style>
+    body{ margin-top: 5em; }
+    .table {
+        margin-top: 100px;
+        margin-bottom: 100px; 
+    }
+</style>
+</head>
+<body>
+    <p> Bonjour, bienvenue sur le formulaire d'inscription</p>
+    <table class="table">
+        <thead> 
+            <!--<tr>
+                <th scope="col">Nom</th> 
+                <th scope="col">Prenom</th>
+                <th scope="col">Date de naissance</th> 
+                <th scope="col">Aime le cours Web</th>
+                <th scope="col">Remarques</th> 
+                <th scope="col">CRUD</th> -->
+            </tr>
+        </thead>
+        <tbody id="studentsTableBody">
+        </tbody>
+    </table>
+        <form id="addStudentForm" action="" onsubmit="onFormSubmit();">
+            <div class="form-group row">
+                <label for="inputNom" class="col-sm-2 col-form-label">Nom*</label>
+                <div class="col-sm-3">
+                    <input type="text" class="form-control" id="inputNom" >
+
+                </div>
+        </div> 
+
+        <label for="inputPrenom" class="col-sm-2 col-form-label">Prénom</label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" id="inputPrenom" >
+        </div>
+
+        <label for="inputDate" class="col-sm-2 col-form-label">Date de naissance</label>
+        <div class="col-sm-3">
+            <input type="date" class="form-control" id="inputDate" >
+        </div>
+
+        <label for="inputAime" class="col-sm-2 col-form-label">Adore le cours</label>
+        <div class="col-sm-3">
+            <input type="checkbox" class="form-control" id="inputAime" >
+        </div>
+
+        <label for="inputRemarque" class="col-sm-2 col-form-label">Remarques</label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" id="inputRemarque" >
+        </div>
+
+
+
+
+        <div class="form-group row">
+            <span class="col-sm-2"></span>
+            <div class="col-sm-2">
+                <button type="submit" class="btn btn-primary form-control">Submit</button>
+            </div>
+        </div>
+    </form>
+    <script>
+        let students = [{
+            nom: "Lucas",
+            prenom: "Arib",
+            date: "24/08/2000",
+            aime:"oui",
+            remarque:"aime les pâtes"
+        }]
+        
+        //fonction ayant pour but d'afficher la table des étudiants 
+        function showStudents(){
+            let currentStudents = "";
+            for(let i=0;i<students.length;i++){
+                currentStudents += `<tr><td>${students[i]['nom']}</td>
+                <td>${students[i]['prenom']}</td>
+                <td>${students[i]['date']}</td>
+                <td>${students[i]['aime']}</td>
+                <td>${students[i]['remarque']}</td>
+                <td>
+                <button class="btn btn-primary" onclick="supprimeLigne(${i})">Delete</button>
+                <button class="btn btn-primary" onclick="supprimeLigne(${i})">Edit</button>
+                </td>
+                </tr>`;
+            }
+        $('#studentsTableBody').html(currentStudents);
+    }
+    
+    function onFormSubmit() {
+            
+        event.preventDefault();
+        let nom = $("#inputNom").val();
+        let prenom = $("#inputPrenom").val();
+        let date = $("#inputDate").val();
+        let aimeString = '';
+        if($('#inputAime').prop('checked')) {
+            aimeString = 'oui';
+        }
+        else{
+            aimeString = 'non';
+        }
+        let remarque = $("#inputRemarque").val();
+    
+            //Il faut que le nom soit non vide pour que l'on puisse ajouter un étudiant
+        let student;
+        if(nom != ''){
+            id: students.length + 1,
+            student = {
+            nom: nom,
+            prenom: prenom,
+            date: date,
+            aime: aimeString,
+            remarque:remarque,
+            }
+        }
+        students.push(student);
+        showStudents();  
+    }
+    
+        //supprime la ligne d'indice index puis montre la table mise à jour
+    function supprimeLigne(index){
+        students.splice(index,1);
+         showStudents();
+    }
+    
+        //edite la ligne sélectionnée 
+     function editLigne(index){
+        students.splice(index,1);
+    }
+
+</script>   
+</body>
+</html>
+    
+
+    
