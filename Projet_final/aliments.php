@@ -1,7 +1,13 @@
+<?php
+    require_once("template_header.php");
+?>
+
+
 <html>   
     <head> </head> 
         <?php
-            
+            require_once("template_header.php");
+        
             
         $BDD = array();
         $BDD['host'] = "localhost";
@@ -25,9 +31,10 @@
             } else {
                 
                 
-                $ID_type = "SELECT ID_type FROM Type_aliments WHERE libellé='".$_POST['type']."'";
-                $resultat = $mysqli->query($ID_type);
-                if(!mysqli_query($mysqli,"INSERT INTO Aliments SET nom='".$_POST['nom']."', ID_type=$resultat")){
+                $ID_type = $mysqli->prepare('SELECT ID_type FROM Type_aliments WHERE libellé=?');
+                $ID_type->execute(array ($_POST['type']));
+                if(!mysqli_query($mysqli,"INSERT INTO Aliments SET nom='".$_POST['nom']."', ID_type=$res")){
+                    
                     echo "Une erreur s'est produite: ".mysqli_error($mysqli);
                 } else {
                     echo " <h1> Vous avez ajoutez l'element ".$_POST['nom']. "avec succés !</h1>";
@@ -39,6 +46,7 @@
         }
         if($AfficherFormulaire==1){
             ?>
+           
         
             <br />
             <form method="post" action="aliments.php">
@@ -49,13 +57,13 @@
                     <option value="">Choisissez le type d'aliments</option>
                     <option value="Fruit">Fruit</option>
                     <option value="Légume">Légume</option>
-                    <option value="hamster">Produit_transformé</option>
-                    <option value="parrot">Viande</option>  
-                    <option value="spider">Poisson</option>
+                    <option value="Produit_transformé">Produit_transformé</option>
+                    <option value="Viande">Viande</option>  
+                    <option value="Poisson">Poisson</option>
                     
                 </select>
                 <form>
-                <input type="submit" value="Ajouter">
+                
             </form>
             <?php
         }

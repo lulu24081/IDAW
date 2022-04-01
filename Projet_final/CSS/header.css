@@ -1,0 +1,43 @@
+.page-holder {
+    min-height: 100vh;
+  }
+  
+  .bg-cover {
+    background-size: cover !important;
+    border-top: 200 px;
+  }
+
+
+
+
+.button {
+    background-color: #152733;
+    border: none;
+    color: white;
+    padding: 20px 34px;
+    text-align: center;
+    text-decoration: none;
+    display: vertical-align;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    float : right;
+
+}
+.button2 {
+    background-color: #152733;
+    border: none;
+    color: white;
+    padding: 20px 34px;
+    text-align: center;
+    text-decoration: none;
+    display: vertical-align;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    float: right;
+
+}
+h1 {
+    color :#152733
+}
