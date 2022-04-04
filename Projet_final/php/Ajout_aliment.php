@@ -26,16 +26,16 @@ if(!$mysqli) {
    
 
 $AfficherFormulaire=1;
-//traitement du formulaire:
+
 
 
     
-if(mysqli_num_rows(mysqli_query($mysqli,"SELECT * FROM Aliments WHERE nom='".$_POST['nom']."'"))==1){//on vérifie que ce pseudo n'est pas déjà utilisé par un autre membre
+if(mysqli_num_rows(mysqli_query($mysqli,"SELECT * FROM Aliments WHERE nom='".$_POST['nom']."'"))==1){
         echo "Cet aliment est déja ajouté.";
     } else {
         
-        if(!mysqli_query($mysqli,"INSERT INTO Aliments SET nom='".$_POST['nom']."', Calorie='".$_POST['Calorie']."',Lipide='".$_POST['Lipide']."',Glucide='".$_POST['Glucide']."',Fibre='".$_POST['Fibre']."',Proteine='".$_POST['proteine']."'")){//on crypte le mot de passe avec la fonction propre à PHP: md5()
-            echo "Une erreur s'est produite: ".mysqli_error($mysqli);//je conseille de ne pas afficher les erreurs aux visiteurs mais de l'enregistrer dans un fichier log
+        if(!mysqli_query($mysqli,"INSERT INTO Aliments SET nom='".$_POST['nom']."', Calorie='".$_POST['Calorie']."',Lipide='".$_POST['Lipide']."',Glucide='".$_POST['Glucide']."',Fibre='".$_POST['Fibre']."',Proteine='".$_POST['proteine']."'")){
+            echo "Une erreur s'est produite: ".mysqli_error($mysqli);
         } else {
             
             echo' <p style="text-align: center;"> Aliment ajouté avec succés</p>';
@@ -49,7 +49,7 @@ if($AfficherFormulaire==1){
   
     <br />
     <form method="post" action="Ajout_aliment.php">
-        nom : <input type="text" name="nom">
+        nom : <input type="text" name="nom" required>
         <br />
         <div class="col-md-12">
 															<select id="niveau" name="aliments" class="form-control" required>
@@ -61,15 +61,15 @@ if($AfficherFormulaire==1){
                                     <option value="Poisson" id="lvl3">poisson</option>
 														 </select>
 												 </div>
-        Calorie : <input type="text" name="Calorie">
+        Calorie : <input type="text" name="Calorie" required>
         <br />
-        Lipide : <input type="text" name="Lipide">
+        Lipide : <input type="text" name="Lipide" required>
         <br />
-        Glucide : <input type="text" name="Glucide">
+        Glucide : <input type="text" name="Glucide" required>
         <br />
-        Fibre : <input type="text" name="Fibre">
+        Fibre : <input type="text" name="Fibre" required>
         <br />
-        Proteine: <input type="text" name="Proteine">
+        Proteine: <input type="text" name="Proteine" required>
         <br />
         <input type="submit" value="Valider">
     </form>

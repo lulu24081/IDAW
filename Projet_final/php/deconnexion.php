@@ -1,6 +1,5 @@
 
-<body style="background-color:#152733;">
-</body>
+
 
 <?php
     session_start();
@@ -19,10 +18,10 @@
         
         
     </head>
-    <body>
+    <body style="background-color:#152733;">
 
         echo "<p style='text-align: center'>Vous êtes déconnecté. <a href="login.php">connexion</a></p>";
-</body>
+    </body>
 </html>
 
     

@@ -17,7 +17,7 @@
     $Insert = "INSERT INTO granularité(Calorie,Lipide,Glucide,Fibre,Protéine)
 		values('$Calorie','$Lipide','$Glucide','$Fibre','$Protéine')";
 	if ($conn->query($Insert)){
-		echo "New record is inserted sucessfully";
+		echo "Aliments ajouté avec succès";
 	}
 	else{
 		echo "Error: ". $Insert ."

@@ -17,7 +17,9 @@
                 <label><b>Mot de passe</b></label>
                 <input type="password" placeholder="Entrer le mot de passe" name="password" required>
 
-                <input type="submit" id='submit' value='LOGIN' >
+               
+                <input id="submit" type="submit" class="LOGIN"><a href="ImangerMieux.html">retour</a>
+
                 <?php
                 if(isset($_GET['erreur'])){
                     $err = $_GET['erreur'];

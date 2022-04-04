@@ -7,6 +7,7 @@
 	$gender = $_POST['gender'];
 	$password = md5($_POST['password']);
 	$niveau_sport = $_POST['niveau_sport'];
+	$mail = $_POST['mail'];
 
 
 	// Database connection
@@ -15,10 +16,11 @@
 		die("Connection Failed : ". $conn->connect_error);
 	} else {
 
-    $Insert = "INSERT INTO user(username, firstName, lastName, password, age, gender, niveau_sport)
-		values('$username', '$firstName', '$lastName', '$password', '$age','$gender', '$niveau_sport')";
+    $Insert = "INSERT INTO user(username, firstName, lastName, password,mail, age, gender, niveau_sport)
+		values('$username', '$firstName', '$lastName',' '$password', '$mail','$age','$gender', '$niveau_sport')";
 	if ($conn->query($Insert)){
-		echo "New record is inserted sucessfully";
+		echo "Vous êtes inscrit avec succés" ;
+		header('Location: login.php');
 	}
 	else{
 		echo "Error: ". $Insert ."
